@@ -1,5 +1,4 @@
-# Project Name #
-
+# Truck it #
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
 
@@ -17,28 +16,20 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
-
+  Truck it
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-
+  An SPA for the food truck lovers of SF to find their favorite food trucks
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-
+  Select a day and time and we'll display available food trucks on the map
 ## Problem ##
-  > Describe the problem your product solves.
-
+  Food trucks move around a lot, so it's sometimes hard to find what you want
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
-
+  Truck it is a one-stop solution, allowing you to quickly make decisions about where to eat
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
-
+  "Not sure what to get for lunch? Truck it."
 ## How to Get Started ##
-  > Describe how easy it is to get started.
-
+  Just open the app and start browsing the map
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
+  "I truck it for almost every meal now."
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  Check it out - it's free!
