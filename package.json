@@ -1,0 +1,23 @@
+{
+  "name": "2016-07-mvp",
+  "version": "1.0.0",
+  "description": "food truck app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drewkosta/2016-07-mvp.git"
+  },
+  "author": "Drew Kosta",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/drewkosta/2016-07-mvp/issues"
+  },
+  "homepage": "https://github.com/drewkosta/2016-07-mvp#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
