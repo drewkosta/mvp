@@ -16,7 +16,7 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  Truck it
+  Where the Truck
 ## Sub-Heading ##
   An SPA for the food truck lovers of SF to find their favorite food trucks
 ## Summary ##
@@ -24,12 +24,13 @@ Once the project moves into development, the press release can be used as a touc
 ## Problem ##
   Food trucks move around a lot, so it's sometimes hard to find what you want
 ## Solution ##
-  Truck it is a one-stop solution, allowing you to quickly make decisions about where to eat
+  Where the Truck is a one-stop solution, allowing you to quickly make decisions about where to eat
 ## Quote from You ##
   "Not sure what to get for lunch? Truck it."
 ## How to Get Started ##
   Just open the app and start browsing the map
 ## Customer Quote ##
-  "I truck it for almost every meal now."
+  "I Where the Truck for almost every meal now."
+    -Kyle Cho
 ## Closing and Call to Action ##
   Check it out - it's free!
