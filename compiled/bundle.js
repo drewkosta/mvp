@@ -86,7 +86,6 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'Where the Truck',
 	        _react2.default.createElement(_menu2.default, null)
 	      );
 	    }
@@ -21986,9 +21985,15 @@
 	
 	var Menu = function Menu() {
 	  return _react2.default.createElement(
-	    'div',
+	    'nav',
 	    null,
-	    'Nested Menu'
+	    _react2.default.createElement(
+	      'h1',
+	      { style: { display: 'inline-block' } },
+	      'Where the Truck'
+	    ),
+	    _react2.default.createElement('select', { style: { display: 'inline-block' } }),
+	    _react2.default.createElement('select', { style: { display: 'inline-block' } })
 	  );
 	};
 	exports.default = Menu;
