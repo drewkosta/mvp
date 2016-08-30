@@ -63,6 +63,10 @@
 	
 	var _menu2 = _interopRequireDefault(_menu);
 	
+	var _map = __webpack_require__(/*! ./map.jsx */ 173);
+	
+	var _map2 = _interopRequireDefault(_map);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -77,16 +81,52 @@
 	  function App() {
 	    _classCallCheck(this, App);
 	
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+	
+	    var now = new Date();
+	    _this.state = {
+	      day: now.getDay(), // dayorder in API
+	      hour: now.getHours(),
+	      minute: now.getMinutes()
+	    };
+	    return _this;
 	  }
 	
 	  _createClass(App, [{
+	    key: 'changeDay',
+	    value: function changeDay() {
+	      var day = document.getElementById('day');
+	      day = day.options[day.selectedIndex].value;
+	      this.setState({
+	        day: day
+	      });
+	    }
+	  }, {
+	    key: 'changeHour',
+	    value: function changeHour() {
+	      var hour = document.getElementById('hour');
+	      hour = hour.options[hour.selectedIndex].value;
+	      this.setState({
+	        hour: hour
+	      });
+	    }
+	  }, {
+	    key: 'changeMinute',
+	    value: function changeMinute() {
+	      var minute = document.getElementById('minute');
+	      minute = minute.options[minute.selectedIndex].value;
+	      this.setState({
+	        minute: minute
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_menu2.default, null)
+	        _react2.default.createElement(_menu2.default, { changeDay: this.changeDay.bind(this), changeHour: this.changeHour.bind(this), changeMinute: this.changeMinute.bind(this) }),
+	        _react2.default.createElement(_map2.default, { day: this.state.day, hour: this.state.hour, minute: this.state.minute })
 	      );
 	    }
 	  }]);
@@ -21983,7 +22023,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var Menu = function Menu() {
+	var Menu = function Menu(props) {
 	  return _react2.default.createElement(
 	    'nav',
 	    null,
@@ -21992,11 +22032,283 @@
 	      { style: { display: 'inline-block' } },
 	      'Where the Truck'
 	    ),
-	    _react2.default.createElement('select', { style: { display: 'inline-block' } }),
-	    _react2.default.createElement('select', { style: { display: 'inline-block' } })
+	    _react2.default.createElement(
+	      'select',
+	      { id: 'day', style: { display: 'inline-block' }, onChange: function onChange() {
+	          return props.changeDay();
+	        } },
+	      _react2.default.createElement(
+	        'option',
+	        { value: '0' },
+	        'Sunday'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '1' },
+	        'Monday'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '2' },
+	        'Tuesday'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '3' },
+	        'Wednesday'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '4' },
+	        'Thursday'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '5' },
+	        'Friday'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '6' },
+	        'Saturday'
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'select',
+	      { id: 'hour', style: { display: 'inline-block' }, onChange: function onChange() {
+	          return props.changeHour();
+	        } },
+	      _react2.default.createElement(
+	        'option',
+	        { value: '0' },
+	        '12 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '1' },
+	        '1 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '2' },
+	        '2 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '3' },
+	        '3 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '4' },
+	        '4 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '5' },
+	        '5 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '6' },
+	        '6 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '7' },
+	        '7 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '8' },
+	        '8 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '9' },
+	        '9 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '10' },
+	        '10 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '11' },
+	        '11 AM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '12' },
+	        '12 PM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '13' },
+	        '1 PM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '14' },
+	        '2 PM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '15' },
+	        '3 PM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '16' },
+	        '4 PM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '17' },
+	        '5 PM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '18' },
+	        '6 PM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '19' },
+	        '7 PM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '20' },
+	        '8 PM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '21' },
+	        '9 PM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '22' },
+	        '10 PM'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '23' },
+	        '11 PM'
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'select',
+	      { id: 'minute', style: { display: 'inline-block' }, onChange: function onChange() {
+	          return props.changeMinute();
+	        } },
+	      _react2.default.createElement(
+	        'option',
+	        { value: '00' },
+	        '00'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '15' },
+	        '15'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '30' },
+	        '30'
+	      ),
+	      _react2.default.createElement(
+	        'option',
+	        { value: '45' },
+	        '45'
+	      )
+	    )
 	  );
 	};
 	exports.default = Menu;
+
+/***/ },
+/* 173 */
+/*!************************!*\
+  !*** ./public/map.jsx ***!
+  \************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 34);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var GMap = function (_React$Component) {
+	  _inherits(GMap, _React$Component);
+	
+	  function GMap() {
+	    _classCallCheck(this, GMap);
+	
+	    return _possibleConstructorReturn(this, (GMap.__proto__ || Object.getPrototypeOf(GMap)).call(this));
+	  }
+	
+	  _createClass(GMap, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.getTrucks();
+	    }
+	  }, {
+	    key: 'getTrucks',
+	    value: function getTrucks() {
+	      $.ajax('/api/trucks', {
+	        type: 'GET',
+	        data: {
+	          day: this.props.day,
+	          hour: this.props.hour,
+	          minute: this.props.minute
+	        },
+	        success: function success(data) {
+	          console.log(data);
+	          // do stuff
+	        },
+	        error: function error(err) {
+	          console.log(err);
+	        }
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'This is gonna be a map'
+	      );
+	    }
+	  }]);
+	
+	  return GMap;
+	}(_react2.default.Component);
+	
+	;
+	exports.default = GMap;
 
 /***/ }
 /******/ ]);
