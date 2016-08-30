@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='./style.css'>
+    <title>Where the Truck</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <h1 style="display:inline-block">Where the Truck</h1>
+      <select id="day" style="display:inline-block" onchange=update('day')>
+        <option value="0">Sunday</option>
+        <option value="1">Monday</option>
+        <option value="2">Tuesday</option>
+        <option value="3">Wednesday</option>
+        <option value="4">Thursday</option>
+        <option value="5">Friday</option>
+        <option value="6">Saturday</option>
+      </select>
+      <select id="hour" style="display:inline-block" onchange=update('hour')>
+        <option value="0">12 AM</option>
+        <option value="1">1 AM</option>
+        <option value="2">2 AM</option>
+        <option value="3">3 AM</option>
+        <option value="4">4 AM</option>
+        <option value="5">5 AM</option>
+        <option value="6">6 AM</option>
+        <option value="7">7 AM</option>
+        <option value="8">8 AM</option>
+        <option value="9">9 AM</option>
+        <option value="10">10 AM</option>
+        <option value="11">11 AM</option>
+        <option value="12">12 PM</option>
+        <option value="13">1 PM</option>
+        <option value="14">2 PM</option>
+        <option value="15">3 PM</option>
+        <option value="16">4 PM</option>
+        <option value="17">5 PM</option>
+        <option value="18">6 PM</option>
+        <option value="19">7 PM</option>
+        <option value="20">8 PM</option>
+        <option value="21">9 PM</option>
+        <option value="22">10 PM</option>
+        <option value="23">11 PM</option>
+      </select>
+      <select id="minute" style="display:inline-block" onchange=update('minute')>
+        <option value="00">00</option>
+        <option value="15">15</option>
+        <option value="30">30</option>
+        <option value="45">45</option>
+      </select>
+    </nav>
+    <div id="map"></div>
+    <script src="index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu71BdMktfhNtZbMEl95_9T2AM831LPZ8&callback=initmap" async defer></script>
+  </body>
+</html>

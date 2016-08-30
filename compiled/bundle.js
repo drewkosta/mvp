@@ -22275,6 +22275,11 @@
 	      this.getTrucks();
 	    }
 	  }, {
+	    key: 'componentWillUpdate',
+	    value: function componentWillUpdate() {
+	      this.getTrucks();
+	    }
+	  }, {
 	    key: 'getTrucks',
 	    value: function getTrucks() {
 	      $.ajax('/api/trucks', {
@@ -22299,7 +22304,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'This is gonna be a map'
+	        this.props.day
 	      );
 	    }
 	  }]);

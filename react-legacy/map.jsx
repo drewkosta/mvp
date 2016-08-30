@@ -10,6 +10,10 @@ class GMap extends React.Component {
     this.getTrucks();
   }
   
+  componentWillUpdate () {
+    this.getTrucks();
+  }
+  
   getTrucks () {
     $.ajax('/api/trucks', {
       type: 'GET',
@@ -31,7 +35,7 @@ class GMap extends React.Component {
   render () {
     return (
       <div>
-        This is gonna be a map
+        {this.props.day}
       </div>  
     );
   }
