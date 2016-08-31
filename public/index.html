@@ -6,8 +6,8 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav>
-      <h1 style="display:inline-block">Where the Truck</h1>
+    <nav> &nbsp &nbsp
+      <h1 style="display:inline-block">Where the Truck &nbsp &nbsp &nbsp</h1>
       <select id="day" style="display:inline-block" onchange=update('day')>
         <option value="0">Sunday</option>
         <option value="1">Monday</option>
@@ -16,7 +16,7 @@
         <option value="4">Thursday</option>
         <option value="5">Friday</option>
         <option value="6">Saturday</option>
-      </select>
+      </select> &nbsp
       <select id="hour" style="display:inline-block" onchange=update('hour')>
         <option value="0">12 AM</option>
         <option value="1">1 AM</option>
@@ -42,7 +42,7 @@
         <option value="21">9 PM</option>
         <option value="22">10 PM</option>
         <option value="23">11 PM</option>
-      </select>
+      </select> &nbsp
       <select id="minute" style="display:inline-block" onchange=update('minute')>
         <option value="00">00</option>
         <option value="15">15</option>
@@ -52,6 +52,6 @@
     </nav>
     <div id="map"></div>
     <script src="index.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu71BdMktfhNtZbMEl95_9T2AM831LPZ8&callback=initmap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=INSERT_KEY_HERE&callback=initmap" async defer></script>
   </body>
 </html>

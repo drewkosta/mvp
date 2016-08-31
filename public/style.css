@@ -4,6 +4,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: darkgray;
 }
 
 .stations, .stations svg {
@@ -23,8 +24,8 @@ html, body {
   stroke-width: 1.5px;
 }
 #map {
-  width: 1000px;
-  height: 800px;
+  width: 100%;
+  height: 950px;
 }
 .dropdown {
   float: right;
